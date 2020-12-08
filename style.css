@@ -3,8 +3,15 @@ body
   background-image: url("https://img.freepik.com/free-photo/background-blurry-restaurant-shop-interior_1203-4031.jpg?size=626&ext=jpg");
   background-size: cover;
   background-attachment: fixed;
-  min-height: 800px;
+  
   font-family: 'Padauk', sans-serif;
+}
+@media only screen and (max-width: 768px){
+  html,
+  body{
+  width:100%;
+  overflow-x:hidden;
+  }
 }
 .tbn{
   background-image: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0)); 
@@ -30,7 +37,12 @@ body
   top: 4%;
   right: 15%;
 }
-
+@media screen and (max-width: 700px) {
+  div.info-box {
+    position: relative;
+    order: 1
+  }
+}
 div.ani {
   width: 2px;
   height: 80px;
@@ -39,13 +51,13 @@ div.ani {
   position: relative;
   animation-name: example;
   animation-duration: 4s;
-  animation-iteration-count: 30;
+  animation-iteration-count: infinite;
 }
 
 @keyframes example {
-  0%   {background-color:red; left:100px; top:0px;}
-  25%  {background-color:yellow; left:600px; top:0px;}
-  50%  {background-color:green; left:100px; top:0px;}
+  0%   {background-color: red; left:0px;}
+  50%  {background-color: yellow; left:400px;}
+  100% {background-color: red; left:700px;}
   
 }
 .row-3 {
